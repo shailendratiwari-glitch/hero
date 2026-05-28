@@ -112,6 +112,7 @@ border-radius: 32px;
 .thumb-item.active {
 border-radius: 32px;
 border: 1px solid #3D2406;
+background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 height: 150PX;
 flex-shrink: 0;
 }
@@ -209,3 +210,54 @@ line-height: normal;
 /* =========================
    RESPONSIVE
 ========================= */
+
+@media (max-width: 1200px) {
+  .showcase-container {
+    flex-direction: column;
+  }
+
+  .main-display-frame {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .hero-content h1 {
+    width: 90%;
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .showcase-container {
+    gap: 40px;
+  }
+
+  .carousel-controls {
+    flex-direction: column;
+  }
+
+  .thumbnail-stack {
+    flex-direction: row;
+  }
+
+  .main-display-frame {
+    height: 350px;
+  }
+
+  .filter-pills {
+    flex-wrap: wrap;
+  }
+}
