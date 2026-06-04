@@ -18,13 +18,15 @@ body {
    MAIN SECTION
 ========================= */
 
-.hero-section {display: flex;
-width: 1320px;
-padding: 160px 0;
-flex-direction: column;
-align-items: center;
-gap: 87px;
-background: #FFF;
+.hero-section {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  padding: 160px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 87px;
+  margin-inline: auto;
 }
 
 /* =========================
@@ -32,32 +34,36 @@ background: #FFF;
 ========================= */
 
 .hero-content {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
 }
 
 .hero-content h1 {
   color: #161616;
-text-align: center;
-font-family: "Cinzel Decorative";
-font-size: 64px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-width: 1103px;
+  text-align: center;
+  font-family: "Cinzel Decorative";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  width: 100%;
+  max-width: 1103px;
 }
 
-.hero-content p {color: #7E7E7E;
-text-align: center;
-font-family: Geist;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width: 442px;
+.hero-content p {
+  color: #7E7E7E;
+  text-align: center;
+  font-family: Geist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 660px;
 }
 
 /* =========================
@@ -65,12 +71,13 @@ width: 442px;
 ========================= */
 
 .showcase-container {
-display: flex;
-height: 700px;
-justify-content: center;
-align-items: flex-start;
-gap: 60px;
-align-self: stretch;
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  height: 700px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
 }
 
 /* =========================
@@ -92,53 +99,51 @@ align-self: stretch;
 .thumb-item {
   width: 180px;
   height: 150px;
-
   border-radius: 20px;
   overflow: hidden;
-
   cursor: pointer;
-
   border: 2px solid transparent;
   transition: 0.3s ease;
 }
 
-.thumb-item img 
-{width: 100%;
-height: 100%;
-background: url(<path-to-image>) lightgray 50% / cover no-repeat;
-
-flex-shrink: 0;
-border-radius: 32px;
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .thumb-item.active {
-border-radius: 32px;
-border: 1px solid #3D2406;
-height: 150PX;
-flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid #3D2406;
+  height: 150px;
+  flex-shrink: 0;
 }
 
 /* =========================
    PAGINATION DOTS
 ========================= */
 
-.pagination-dots {display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 20px;
+.pagination-dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.dot {border-radius: 10px;
-background: #DCDCDC;
-width: 12px;
-height: 12px;
+.dot {
+  border-radius: 10px;
+  background: #DCDCDC;
+  width: 12px;
+  height: 12px;
 }
 
-.dot.active {border-radius: 10px;
-background: #6E6E6E;
-width: 12px;
-height: 12px;
+.dot.active {
+  border-radius: 10px;
+  background: #6E6E6E;
+  width: 12px;
+  height: 12px;
 }
 
 /* =========================
@@ -146,19 +151,18 @@ height: 12px;
 ========================= */
 
 .main-display-frame {
-  width: 968px;
+  width: 100%;
+  max-width: 968px;
   height: 700px;
-
   border-radius: 40px;
   overflow: hidden;
-border-radius: 40px;
-background: url(<path-to-image>) lightgray 50% / cover no-repeat;
-box-shadow: -8px -8px 40px 0 rgba(0, 0, 0, 0.20), 8px 8px 40px 0 rgba(0, 0, 0, 0.20);
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  box-shadow: -8px -8px 40px 0 rgba(0, 0, 0, 0.20), 8px 8px 40px 0 rgba(0, 0, 0, 0.20);
 }
 
 .main-display-frame img {
   width: 100%;
-  height: fixed;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -166,99 +170,183 @@ box-shadow: -8px -8px 40px 0 rgba(0, 0, 0, 0.20), 8px 8px 40px 0 rgba(0, 0, 0, 0
    FILTER PILLS
 ========================= */
 
-.filter-pills {display: flex;
-transform: rotate(-0.067deg);
-padding: 8px;
-justify-content: center;
-align-items: center;
-gap: 16px;border-radius: 40px;
-background: #EBEBEB;
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  transform: rotate(-0.067deg);
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 40px;
+  background: #EBEBEB;
 }
 
-.pill {display: flex;
-padding: 8px 16px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 40px;
-color: var(--Text, #0E0E0E);
-text-align: center;
-font-family: Geist;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-
-
+.pill {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  color: var(--Text, #0E0E0E);
+  text-align: center;
+  font-family: Geist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.pill.active {display: flex;
-padding: 8px 16px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 40px;
-background: linear-gradient(90deg, #3D2406 0%, #88510F 100%);
-color: var(--Text, #fdf9f9);
-text-align: center;
-font-family: Geist;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.pill.active {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #3D2406 0%, #88510F 100%);
+  color: var(--Text, #fdf9f9);
+  text-align: center;
+  font-family: Geist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1200px) {
-  .showcase-container {
-    flex-direction: column;
-  }
-
-  .main-display-frame {
-    width: 100%;
-    max-width: 800px;
-  }
-
-  .hero-content h1 {
-    width: 90%;
-    font-size: 52px;
-  }
-}
-
 @media (max-width: 768px) {
   .hero-section {
-    padding: 100px 20px;
+display: flex;
+width: 393px;
+padding: 40px 32px;
+flex-direction: column;
+align-items: center;
+gap: 40px;
+background: #FFF;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 265px;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 38px;
+    color: #161616;
+text-align: center;
+font-family: "Cinzel Decorative";
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
   }
 
   .hero-content p {
-    width: 100%;
-    font-size: 16px;
+    color: #7E7E7E;
+text-align: center;
+font-family: Geist;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
   }
 
   .showcase-container {
-    gap: 40px;
-  }
-
-  .carousel-controls {
+    width: 100%;
+    max-width: 265px;
+    height: auto;
     flex-direction: column;
-  }
-
-  .thumbnail-stack {
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
 
   .main-display-frame {
-    height: 350px;
+    order: 1;
+    width: 100%;
+    max-width: 265px;
+    height: 196px;
+    border-radius: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  }
+
+  .main-display-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-controls {
+    order: 2;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .pagination-dots {
+    order: 1;
+    flex-direction: row;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .dot,
+  .dot.active {
+    width: 6px;
+    height: 6px;
+  }
+
+  .thumbnail-stack {
+    order: 2;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .thumb-item,
+  .thumb-item.active {
+    width: 44px;
+    height: 34px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
 
   .filter-pills {
-    flex-wrap: wrap;
+    width: auto;
+    padding: 4px;
+    gap: 4px;
+    border-radius: 40px;
+  }
+
+  .pill,
+  .pill.active {
+    font-size: 7px;
+    padding: 5px 12px;
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 32px;
   }
 }
